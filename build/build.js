@@ -38,21 +38,13 @@ seq()
 		// Read in 'interlace.png'.
 		fs.readFile('lib/interlace.png', this);
 	})
-	.par(function () {
-		// Read in 'external.png'.
-		fs.readFile('lib/external.png', this);
-	})
-	.seq(function(styles, interlacepng, externalpng) {
+	.seq(function(styles, interlacepng) {
 		// Convert to string.
 		styles = '' + styles;
 
 		// Embed interlace.png
 		var interlace = 'url("data:' + mime.lookup('lib/interlace.png') + ';base64,' + new Buffer(interlacepng).toString('base64') + '")';
 		styles = styles.replace('dataurl("interlace.png")', interlace);
-
-		// Embed external.png
-		var external = 'url("data:' + mime.lookup('lib/external.png') + ';base64,' + new Buffer(externalpng).toString('base64') + '")';
-		styles = styles.replace('dataurl("external.png")', external);
 
 		// Minify the stylesheet.
 		less.render(styles, {compress: true}, this);
