@@ -1,6 +1,9 @@
 Relevant key strokes:
     up/down arrows - navigate past inputs
-    esc - clear current input
-
+    escape - clear current input
+    return - enter your current input
 
 accepted inputs:
+    inventory
+    eat (food)
+    move/go (compass direction)
