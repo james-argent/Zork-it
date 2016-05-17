@@ -3,7 +3,7 @@ Relevant key strokes:
     escape - clear current input
     return - enter your current input
 
-accepted inputs:
+normal accepted inputs:
     inventory
     eat (food)
     move/go (compass direction)
