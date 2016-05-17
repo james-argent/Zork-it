@@ -13,8 +13,6 @@ normal accepted inputs:
 known issues/things to do:
     add more differences between difficulties
     add win condition
-    add lose condition
-    add max distances
     add conversations
     add random attacks north of wall
     add map to the html page
