@@ -7,11 +7,15 @@ normal accepted inputs:
     inventory
     eat (food)
     move/go (compass direction)
+    health
 
 known issues/things to do:
+    add more differences between difficulties
     add win condition
     add lose condition
     add max distances
     add conversations
-    add health stuff
     add random attacks north of wall
+    add map to the html page
+    eventually add health/inventory to the html page
+    multiple items pickup?
