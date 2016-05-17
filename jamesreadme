@@ -8,6 +8,7 @@ normal accepted inputs:
     eat (food)
     move/go (compass direction)
     health
+    drop (item)
 
 known issues/things to do:
     add more differences between difficulties
