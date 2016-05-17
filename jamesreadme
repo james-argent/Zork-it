@@ -7,3 +7,12 @@ normal accepted inputs:
     inventory
     eat (food)
     move/go (compass direction)
+
+known issues/things to do:
+    inventory command syntax a bit messed up
+    add win condition
+    add lose condition
+    add max distances
+    add conversations
+    add health stuff
+    add random attacks north of wall
