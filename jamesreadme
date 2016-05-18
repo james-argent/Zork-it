@@ -25,3 +25,4 @@ Known issues/things to do/suggestions:
     eventually add health/inventory to the html page
     multiple items pickup?
     bug whereby eating something causes 'undefined to show up the the terminal'
+    map scrolls up as the page scrolls down
