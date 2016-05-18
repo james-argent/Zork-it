@@ -195,7 +195,7 @@ html, body {
     width: 50%;
     height: 100%;
     right: 0;
-    position: absolute;
+    position: static;
     top: 0;
     border-left: 3px solid white;
 }
