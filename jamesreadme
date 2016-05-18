@@ -3,14 +3,18 @@ Relevant key strokes:
     escape - clear current input
     return - enter your current input
 
-normal accepted inputs:
+Normal accepted inputs:
     inventory
     eat (food)
     move/go (compass direction)
     health
     drop (item)
 
-known issues/things to do/suggestions:
+Differences between difficulties:
+    Max number of turns to win in
+    Hard difficulty doesn't get told coordinates
+
+Known issues/things to do/suggestions:
     add more differences between difficulties
     add win condition
     add conversations
