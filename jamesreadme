@@ -9,6 +9,8 @@ Normal accepted inputs:
     move/go (compass direction)
     health
     drop (item)
+    look
+    clear/cls
 
 Differences between difficulties:
     Max number of turns to win in
@@ -16,7 +18,6 @@ Differences between difficulties:
 
 Known issues/things to do/suggestions:
     add more differences between difficulties
-    add look
     add help
     add win condition
     add conversations
