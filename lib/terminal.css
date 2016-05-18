@@ -18,7 +18,7 @@ html, body {
 .terminal {
     min-height: 100%;
     position: relative;
-    width: 100%;
+    width: 50%;
 }
 
 .terminal .container {
@@ -189,4 +189,12 @@ html, body {
 
 .terminal-white .prompt {
     color: #02f;
+}
+
+#map {
+    width: 50%;
+    height: 100%;
+    right: 0;
+    position: absolute;
+    top: 0;
 }
