@@ -11,6 +11,7 @@ Normal accepted inputs:
     drop (item)
     look
     clear/cls
+    help
 
 Differences between difficulties:
     Max number of turns to win in
@@ -18,7 +19,6 @@ Differences between difficulties:
 
 Known issues/things to do/suggestions:
     add more differences between difficulties
-    add help
     add win condition
     add conversations
     add random attacks north of wall
