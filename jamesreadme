@@ -16,12 +16,13 @@ Normal accepted inputs:
 Differences between difficulties:
     Max number of turns to win in
     Hard difficulty doesn't get told coordinates
+    How often you are attacked when north of the wall
 
 Known issues/things to do/suggestions:
     add more differences between difficulties
     add win condition
     add conversations
-    add random attacks north of wall
-    add map to the html page
     eventually add health/inventory to the html page
     multiple items pickup?
+    bug whereby eating something causes 'undefined to show up the the terminal'
+    map scrolls up as the page scrolls down
