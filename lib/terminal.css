@@ -73,7 +73,6 @@ html, body {
 }
 
 /* Modern theme */
-
 .terminal-modern {
     color: white;
     font-family: Inconsolata, monospace;
@@ -135,7 +134,8 @@ html, body {
 
 .minor {
     width: 50%;
-    transition-delay: 1s
+    transition-delay: 1s;
+    -webkit-transition-delay: 1s;
 }
 
 .major {
