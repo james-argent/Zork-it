@@ -72,48 +72,6 @@ html, body {
     padding: 0;
 }
 
-/* Interlaced theme */
-
-.terminal-interlaced {
-    color: white;
-    font-family: Inconsolata, monospace;
-}
-
-.terminal-interlaced a {
-    color: #fff;
-}
-
-.terminal-interlaced .background {
-    background: dataurl("interlace.png") top left repeat, rgba(0, 0, 0, 0.9);
-    height: 100%;
-    left: 0;
-    pointer-events: none;
-    position: absolute;
-    top: 0;
-    width: 100%;
-}
-
-.terminal-interlaced .background .interlace {
-    background: dataurl("interlace.png") top left repeat, transparent;
-    height: 100%;
-    left: 0;
-    opacity: 0.15;
-    pointer-events: none;
-    position: absolute;
-    top: 0;
-    width: 100%;
-    z-index: 10;
-}
-
-.terminal-interlaced .container output pre {
-    color: white;
-    font-family: Inconsolata, monospace;
-}
-
-.terminal-interlaced .prompt {
-    color: #fc0;
-}
-
 /* Modern theme */
 
 .terminal-modern {
@@ -150,44 +108,6 @@ html, body {
 
 .terminal-modern .prompt {
     color: #fc0;
-}
-
-/* White theme */
-
-.terminal-white {
-    color: black;
-    font-family: Inconsolata, monospace;
-}
-
-.terminal-white a {
-    color: #000;
-}
-
-.terminal-white .background {
-    background: #fff;
-    height: 100%;
-    left: 0;
-    pointer-events: none;
-    position: absolute;
-    top: 0;
-    width: 100%;
-}
-
-.terminal-white .background .interlace {
-    display: none;
-}
-
-.terminal-white .container {
-    text-shadow: none;
-}
-
-.terminal-white .container output pre {
-    color: black;
-    font-family: Inconsolata, monospace;
-}
-
-.terminal-white .prompt {
-    color: #02f;
 }
 
 #map {
