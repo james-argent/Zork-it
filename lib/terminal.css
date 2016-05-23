@@ -198,6 +198,9 @@ html, body {
     padding: 10px;
     background-color: black;
     cursor: pointer;
+    transition: width 1s, min-height 1s;
+    transition-timing-function: ease-in-out;
+    -webkit-transition-timing-function: ease-in-out;
 }
 
 .expanded {
@@ -212,21 +215,18 @@ html, body {
 
 .minor {
     width: 50%;
+    transition-delay: 1s
 }
 
 .major {
     width: calc(100% - 220px);
 }
 
-.spaceFillShow {
+.spaceFill {
     top: 0;
     right: 0;
     position: fixed;
     height: calc(100% - 320px);
     width: 220px;
     background-color: black;
-}
-
-.spaceFillHide {
-    display: none;
 }
