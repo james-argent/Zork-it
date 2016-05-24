@@ -150,3 +150,17 @@ html, body {
     width: 320px;
     background-color: black;
 }
+
+.hidden {
+    display: none;
+}
+
+#winMessage, #loseMessage {
+    background-color: black;
+    position: fixed;
+    top: calc(50% - 50px);
+    left: calc(50% - 190px);
+    z-index: 9999;
+    width: 380px;
+    height: 100px;
+}
