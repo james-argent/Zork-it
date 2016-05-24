@@ -128,7 +128,7 @@ html, body {
 }
 
 .contracted {
-    width: 200px;
+    width: 300px;
     min-height: 300px;
 }
 
@@ -139,7 +139,7 @@ html, body {
 }
 
 .major {
-    width: calc(100% - 220px);
+    width: calc(100% - 320px);
 }
 
 .spaceFill {
@@ -147,6 +147,6 @@ html, body {
     right: 0;
     position: fixed;
     height: calc(100% - 320px);
-    width: 220px;
+    width: 320px;
     background-color: black;
 }
