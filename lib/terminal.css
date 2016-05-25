@@ -163,8 +163,16 @@ html, body {
     z-index: 9999;
     width: 380px;
     height: 100px;
+    transition: left 1s;
+    -webkit-transition: left 1s;
+    transition-timing-function: ease-in-out;
+    -webkit-transition-timing-function: ease-in-out;
 }
 
 .recenter {
     left: calc(25% - 190px) !important;
+    transition: left 1s;
+    -webkit-transition: left 1s;
+    transition-timing-function: ease-in-out;
+    -webkit-transition-timing-function: ease-in-out;
 }
