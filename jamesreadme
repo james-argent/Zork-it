@@ -13,6 +13,7 @@ In-game normally accepted inputs:
     look
     clear/cls
     help
+    map
 
 Differences between difficulties:
     Max number of turns to win in
@@ -23,3 +24,4 @@ Known issues/things to do/suggestions:
     add more differences between difficulties
     add conversations
     eventually add health/inventory to the html page
+    make more skins for the game
