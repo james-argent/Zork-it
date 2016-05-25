@@ -164,3 +164,7 @@ html, body {
     width: 380px;
     height: 100px;
 }
+
+.recenter {
+    left: calc(25% - 190px) !important;
+}
