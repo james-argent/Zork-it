@@ -156,7 +156,7 @@ html, body {
 }
 
 #winMessage, #loseMessage {
-    background-color: black;
+    background-color: transparent;
     position: fixed;
     top: calc(50% - 50px);
     left: calc(50% - 190px);
