@@ -134,21 +134,28 @@ html, body {
 
 .minor {
     width: 50%;
-    transition-delay: 1s;
-    -webkit-transition-delay: 1s;
+    transition: width 1s;
+    -webkit-transition: width 1s;
+    transition-timing-function: ease-in-out;
+    -webkit-transition-timing-function: ease-in-out;
 }
 
 .major {
     width: calc(100% - 320px);
+    transition: width 1s;
+    -webkit-transition: width 1s;
+    transition-timing-function: ease-in-out;
+    -webkit-transition-timing-function: ease-in-out;
 }
 
 .spaceFill {
     top: 0;
-    right: 0;
+    left: 0;
     position: fixed;
-    height: calc(100% - 320px);
-    width: 320px;
+    min-height: 100%;
+    width: 100%;
     background-color: black;
+    z-index: -1;
 }
 
 .hidden {
