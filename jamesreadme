@@ -7,12 +7,12 @@ In-game normally accepted inputs:
     inventory
     eat (food)
     move/go (compass direction)
-    health
+    health/life
     drop (item)
     give (item)
     look
     clear/cls
-    help
+    help/advice
     map
 
 Differences between difficulties:
@@ -23,5 +23,6 @@ Differences between difficulties:
 Known issues/things to do/suggestions:
     add more differences between difficulties
     add conversations
+    add dictionary
     eventually add health/inventory to the html page
     make more skins for the game
