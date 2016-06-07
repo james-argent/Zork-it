@@ -183,3 +183,33 @@ html, body {
     transition-timing-function: ease-in-out;
     -webkit-transition-timing-function: ease-in-out;
 }
+
+#healthBar {
+    background-color: white;
+    position: fixed;
+    top: 16px;
+    right: 16px;
+    width: calc(300px - 4px);
+    height: calc(80px - 4px);
+    z-index: 200;
+    border: 2px solid black;
+    border-radius: 4px;
+}
+
+#healthText {
+    position: fixed;
+    top: calc(16px + 80px);
+    right: calc(16px + (300px - 254px)/2)
+}
+
+#health {
+    background-color: red;
+    position: fixed;
+    top: 16px;
+    height: calc(80px - 4px);
+    left: calc(100% - (300px + 16px));
+    z-index: 201;
+    border: 2px solid black;
+    border-radius: 4px;
+    width: calc(300px - 4px);
+}
