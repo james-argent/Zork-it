@@ -21,8 +21,7 @@ Differences between difficulties:
     How often you are attacked when north of the wall
 
 Known issues/things to do/suggestions:
-    <<<dying due to lack of HP or being executed currently shows that the user still has some health>>>
-    <<<currently the same result if you lose due to going over the max turns or getting 0 health>>>
+    <<<dying due to lack of HP or being executed currently incorrectly shows that the user still has some health>>>
     add conversations
     add dictionary
     eventually add health/inventory to the html page
