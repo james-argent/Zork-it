@@ -166,7 +166,7 @@ html, body {
     background-color: transparent;
     position: fixed;
     top: calc(50% - 50px);
-    left: calc(50% - 190px);
+    left: calc(25% - 190px);
     z-index: 9999;
     width: 380px;
     height: 100px;
@@ -177,7 +177,7 @@ html, body {
 }
 
 .recenter {
-    left: calc(25% - 190px) !important;
+    left: calc(50% - 190px) !important;
     transition: left 1s;
     -webkit-transition: left 1s;
     transition-timing-function: ease-in-out;
