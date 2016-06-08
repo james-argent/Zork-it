@@ -14,6 +14,7 @@ In-game normally accepted inputs:
     clear/cls
     help/advice
     map
+    restart
 
 Differences between difficulties:
     Max number of turns to win in
@@ -30,3 +31,4 @@ To do list:
 
 Known bugs/issues:
     Sometimes being executed won't lose you all your health. Couldn't reproduce.
+    When restarting, medium difficulty is unavoidable
