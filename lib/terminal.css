@@ -159,7 +159,7 @@ html, body {
 }
 
 .hidden {
-    display: none;
+    opacity: 0;
 }
 
 #winMessage, #loseMessage {
@@ -170,8 +170,8 @@ html, body {
     z-index: 9999;
     width: 380px;
     height: 100px;
-    transition: left 1s;
-    -webkit-transition: left 1s;
+    transition: left 1s, opacity 1s;
+    -webkit-transition: left 1s, opacity 1s;
     transition-timing-function: ease-in-out;
     -webkit-transition-timing-function: ease-in-out;
 }
@@ -212,4 +212,8 @@ html, body {
     border: 2px solid black;
     border-radius: 4px;
     width: calc(300px - 4px);
+    transition: width 1s;
+    -webkit-transition: width 1s;
+    transition-timing-function: ease-in-out;
+    -webkit-transition-timing-function: ease-in-out;
 }

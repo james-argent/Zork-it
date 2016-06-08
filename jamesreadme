@@ -21,7 +21,9 @@ Differences between difficulties:
     How often you are attacked when north of the wall
 
 Known issues/things to do/suggestions:
+    <<bug where the HP sometimes won't go back to full when restarting>>
+    <<bug where the HP sometimes won't go down to 0 when executed>>
     add conversations
     add dictionary
-    eventually add health/inventory to the html page
+    eventually inventory to the html page?
     make more skins for the game
