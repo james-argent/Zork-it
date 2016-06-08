@@ -1,8 +1,8 @@
-@font-face {
-    font-family: 'Inconsolata';
-    font-style: normal;
+* {
+    font-family: Inconsolata, monospace;
+    font-size: 16px;
     font-weight: normal;
-    src: local('Inconsolata'), url('Inconsolata.woff') format('woff');
+    font-style: normal;
 }
 
 html, body {
@@ -39,7 +39,6 @@ html, body {
     background-color: transparent;
     border: none;
     color: inherit;
-    font: inherit;
     margin: 0;
     outline: none;
     width: 100%;
@@ -75,7 +74,6 @@ html, body {
 /* Modern theme */
 .terminal-modern {
     color: white;
-    font-family: Inconsolata, monospace;
 }
 
 .terminal-modern a {
@@ -102,7 +100,6 @@ html, body {
 
 .terminal-modern .container output pre {
     color: white;
-    font-family: Inconsolata, monospace;
 }
 
 .terminal-modern .prompt {

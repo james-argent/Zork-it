@@ -20,8 +20,13 @@ Differences between difficulties:
     Hard difficulty doesn't get told coordinates
     How often you are attacked when north of the wall
 
-Known issues/things to do/suggestions:
+To do list:
+    add restart option?
+    getting attacked whilst carrying dragonglass shouldn't be that bad
     add conversations
     add dictionary
     maybe add inventory to the html page?
     make more skins for the game
+
+Known bugs/issues:
+    Sometimes being executed won't lose you all your health. Couldn't reproduce.
