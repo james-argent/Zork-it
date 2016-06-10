@@ -22,11 +22,11 @@ Differences between difficulties:
     How often you are attacked when north of the wall
 
 To do list:
-    add conversations
-    add dictionary
+    expand conversations
+    add dictionary??
     maybe add inventory to the html page?
     make more skins for the game
     craig's to-do: consider what to do while loading the JSON data
 
 Known bugs/issues:
-    Sometimes being executed won't lose you all your health. Occurred once, couldn't reproduce.
+    Sometimes being executed won't lose you all your health. Occurred once, couldn't reproduce. (8/6/2016)
