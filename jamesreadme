@@ -1,7 +1,7 @@
 Relevant key strokes:
     up/down arrows - navigate past inputs
     escape - clear current input
-    return - enter your current input
+    return/enter - enter your current input
 
 In-game normally accepted inputs:
     inventory
@@ -15,6 +15,7 @@ In-game normally accepted inputs:
     help/advice
     map
     restart
+    quit
 
 Differences between difficulties:
     Max number of turns to win in
