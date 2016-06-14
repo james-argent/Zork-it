@@ -20,6 +20,7 @@ Differences between difficulties:
     Max number of turns to win in
     Hard difficulty doesn't get told coordinates
     How often you are attacked when north of the wall
+    Over-visiting location hints
 
 To do list:
     expand conversations
