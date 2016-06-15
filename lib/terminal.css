@@ -193,10 +193,15 @@ html, body {
     border-radius: 4px;
 }
 
-#healthText {
+#health-Text {
     position: fixed;
     top: calc(16px + 80px);
-    right: calc(16px + (300px - 254px)/2)
+    right: calc(16px + (300px - 160px)/2);
+    font-size: 60px;
+    color: yellow;
+    z-index: 9999;
+    font-family: fantasy;
+    text-shadow: 2px 2px black;
 }
 
 #health {
