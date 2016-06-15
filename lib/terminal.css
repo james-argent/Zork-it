@@ -160,13 +160,10 @@ html, body {
 }
 
 #winMessage, #loseMessage {
-    background-color: transparent;
     position: fixed;
     top: calc(50% - 50px);
-    left: calc(25% - 190px);
+    left: calc(25% - 110px);
     z-index: 9999;
-    width: 380px;
-    height: 100px;
     transition: left 1s, opacity 1s;
     -webkit-transition: left 1s, opacity 1s;
     transition-timing-function: ease-in-out;
@@ -174,7 +171,7 @@ html, body {
 }
 
 .recenter {
-    left: calc(50% - 190px) !important;
+    left: calc(50% - 110px) !important;
     transition: left 1s;
     -webkit-transition: left 1s;
     transition-timing-function: ease-in-out;
@@ -197,6 +194,9 @@ html, body {
     position: fixed;
     top: calc(16px + 80px);
     right: calc(16px + (300px - 160px)/2);
+}
+
+.terminalBigText {
     font-size: 60px;
     color: yellow;
     z-index: 9999;

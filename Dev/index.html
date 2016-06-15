@@ -14,13 +14,13 @@
 		<script src="../lib/game.js"></script>
 		<script src="../lib/terminalFX.js"></script>
 
-		<img id="winMessage" class="hidden" src="../images/winMessage.png">
-		<img id="loseMessage" class="hidden" src="../images/loseMessage.png">
+		<div class="hidden terminalBigText" id="winMessage">You win!</div>
+		<div class="hidden terminalBigText" id="loseMessage">You Lose.</div>
 		<img onclick="resizeMap()" id="map" class="expanded" src="../images/map.png">
 		<span id="healthBar">
 			<span id="health"></span>
 		</span>
-		<div id="health-Text">Health</div>
+		<div class="terminalBigText" id="health-Text">Health</div>
 
 	</body>
 </html>
