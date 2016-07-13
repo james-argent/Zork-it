@@ -19,3 +19,14 @@ QUnit.test( "changeAttackChance test", function( assert ) {
     assert.ok( changeAttackChance() === -1, "Passed!" );
     assert.ok( changeAttackChance(null) === -1, "Passed!" );
 });
+
+QUnit.test( "setDifficulty test", function( assert ) {
+    assert.ok( setDifficulty("easy") === "easy", "Passed!" );
+    assert.ok( setDifficulty("hard") === "hard", "Passed!" );
+    assert.ok( setDifficulty("medium") === "medium", "Passed!" );
+    assert.ok( setDifficulty("") === "medium", "Passed!" );
+    assert.ok( setDifficulty("potato") === "medium", "Passed!" );
+    assert.ok( setDifficulty("EASY") === "medium", "Passed!" );
+    assert.ok( setDifficulty("HaRd") === "medium", "Passed!" );
+    assert.ok( setDifficulty(null) === "medium", "Passed!" );
+});
