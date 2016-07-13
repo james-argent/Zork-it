@@ -33,6 +33,7 @@ To do list:
 
 Known bugs:
     Sometimes being executed won't lose you all your health. Occurred once, couldn't reproduce. (8/6/2016)
+    When on 0 health, the LHS border is too large due to the empty red div (13/07/2016)
 
 Browser compatibility:
     Designed to work on Google Chrome
