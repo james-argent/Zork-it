@@ -58,3 +58,23 @@ QUnit.test("responseLength test", function (assert) {
     respond("friend");
     assert.ok(getResponse() === " hello there friend", "Passed!");
 });
+
+QUnit.test("setInitialGameState test", function (assert) {
+    var initialState = setInitialGameState();
+    assert.ok(initialState.displayedHealth === 10, "Passed!");
+    assert.ok(initialState.inventory[0] === "pork", "Passed!");
+    assert.ok(initialState.inventory[1] === "beef", "Passed!");
+    assert.ok(initialState.currentCoordinates.x === 0, "Passed!");
+    assert.ok(initialState.currentCoordinates.y === 0, "Passed!");
+    assert.ok(initialState.difficulty === null, "Passed!");
+    assert.ok(initialState.currentLocationName === null, "Passed!");
+    assert.ok(initialState.attackChance === 20, "Passed!");
+    assert.ok(initialState.elapsedTime === 0, "Passed!");
+    assert.ok(initialState.health === 10, "Passed!");
+    assert.ok(initialState.completedObjectives.length === 0, "Passed!");
+    assert.ok(initialState.gameEnded === false, "Passed!");
+    assert.ok(initialState.overtime === 0, "Passed!");
+    assert.ok(initialState.restartQueried === false, "Passed!");
+    assert.ok(initialState.quitQueried === false, "Passed!");
+    assert.ok(initialState.maxTurns === 100, "Passed!");
+});
