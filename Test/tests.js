@@ -84,3 +84,17 @@ QUnit.test("healthCheck test", function (assert) {
     healthCheck(0);
     assert.ok(getResponse() === " Your current health is: 10. Your current health is: 0.", "Passed!");
 });
+
+QUnit.test("Objective Complete test", function (assert) {
+    assert.ok(objectiveComplete("london", ["paris","london"])[0] === "paris", "Passed!");
+    assert.ok(getResponse() === " I've already done that here!", "Passed!");
+    assert.ok(objectiveComplete("london", ["paris","london"])[1] === "london", "Passed!");
+    assert.ok(objectiveComplete("london", ["paris","london"]).length === 2, "Passed!");
+});
+
+QUnit.test("Objective Not Complete test", function (assert) {
+    assert.ok(objectiveComplete("london", ["paris"])[0] === "paris", "Passed!");
+    assert.ok(responseLength() === 0, "Passed!");
+    assert.ok(objectiveComplete("london", ["paris"])[1] === "london", "Passed!");
+    assert.ok(objectiveComplete("london", ["paris"]).length === 2, "Passed!");
+});
