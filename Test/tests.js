@@ -78,3 +78,9 @@ QUnit.test("setInitialGameState test", function (assert) {
     assert.ok(initialState.quitQueried === false, "Passed!");
     assert.ok(initialState.maxTurns === 100, "Passed!");
 });
+
+QUnit.test("healthCheck test", function (assert) {
+    healthCheck(10);
+    healthCheck(0);
+    assert.ok(getResponse() === " Your current health is: 10. Your current health is: 0.", "Passed!");
+});
