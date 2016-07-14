@@ -98,3 +98,11 @@ QUnit.test("Objective Not Complete test", function (assert) {
     assert.ok(objectiveComplete("london", ["paris"])[1] === "london", "Passed!");
     assert.ok(objectiveComplete("london", ["paris"]).length === 2, "Passed!");
 });
+
+QUnit.test("Conversation test", function (assert) {
+    assert.ok(talkTo(["sam"], "Castle Black", [{"name": "Castle Black", "talkPerson": "sam"}], [{"name":"sam", "intro": "Hey Jon!"}]) === "Sam: Hey Jon!", "Passed!");
+    assert.notOk(talkTo(["tom"], "Castle Black", [{"name": "Castle Black", "talkPerson": "sam"}], [{"name":"sam", "intro": "Hey Jon!"}]) === "Sam: Hey Jon!", "Passed!");
+    assert.notOk(talkTo(["sam"], "Castle Black", [{"name": "Castle Black", "talkPerson": "sam"}], [{"name":"sam", "intro": "Hey Jon!"}]) === "Hey Jon!", "Passed!");
+    assert.notOk(talkTo(["sam"], "Castle Black", [{"name": "Castle Black", "talkPerson": "sam"}], [{"name":"tom", "intro": "Hey Jon!"}]) === "Sam: Hey Jon!", "Passed!");
+    assert.notOk(talkTo(["sam"], "Las Vegas", [{"name": "Castle Black", "talkPerson": "sam"}], [{"name":"sam", "intro": "Hey Jon!"}]) === "Sam: Hey Jon!", "Passed!");
+});

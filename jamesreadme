@@ -33,8 +33,9 @@ To do list:
     craig's to-do: consider what to do while loading the JSON data
 
 Known bugs:
-    Sometimes being executed won't lose you all your health. Occurred once, couldn't reproduce. (8/6/2016)
+    If instead of giving a viable input when asked to enter a difficulty at the start, it doesn't respond to the non-viable input. (14/07/2016)
     When on 0 health, the LHS border is too large due to the empty red div (13/07/2016)
+    Sometimes being executed won't lose you all your health. Occurred once, couldn't reproduce. (8/6/2016)
 
 Browser compatibility:
     Designed to work on Google Chrome
