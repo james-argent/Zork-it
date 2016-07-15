@@ -138,3 +138,17 @@ QUnit.test("Get Inventory Info test", function (assert) {
     getInventory(["beef", "pork", "wine"]);
     assert.ok(getResponse() === " Your inventory contains: beef, pork, and wine.", "Passed!");
 });
+
+QUnit.test("Look command test", function (assert) {
+    look(false,"hard");
+    assert.ok(getResponse() === " There's nothing around.", "Passed!");
+    clearResponse();
+    look(true,"medium");
+    assert.ok(getResponse() === " ", "Passed!");
+    clearResponse();
+    look(true,"hard");
+    assert.ok(getResponse() === " ", "Passed!");
+    clearResponse();
+    look(false,"easy");
+    assert.ok(getResponse() === " ", "Passed!");
+});
