@@ -106,3 +106,33 @@ QUnit.test("Conversation test", function (assert) {
     assert.notOk(talkTo(["sam"], "Castle Black", [{"name": "Castle Black", "talkPerson": "sam"}], [{"name":"tom", "intro": "Hey Jon!"}]) === "Sam: Hey Jon!", "Passed!");
     assert.notOk(talkTo(["sam"], "Las Vegas", [{"name": "Castle Black", "talkPerson": "sam"}], [{"name":"sam", "intro": "Hey Jon!"}]) === "Sam: Hey Jon!", "Passed!");
 });
+
+QUnit.test("No Drop Length Item test", function (assert) {
+    assert.ok(dropItem(["pork"],["beef"]).length === 1, "Passed!");
+    assert.ok(getResponse() === " You can't drop what you don't have.", "Passed!");
+});
+
+QUnit.test("No Drop Item test", function (assert) {
+    assert.ok(dropItem(["pork"],["beef"])[0] === "pork", "Passed!");
+    assert.ok(getResponse() === " You can't drop what you don't have.", "Passed!");
+});
+
+QUnit.test("Do Drop Length Item test", function (assert) {
+    assert.ok(dropItem(["pork","beef"],["pork"]).length === 1, "Passed!");
+    assert.ok(getResponse() === " You dropped your pork.", "Passed!");
+});
+
+QUnit.test("Do Drop Item test", function (assert) {
+    assert.ok(dropItem(["pork","beef"],["pork"])[0] === "beef", "Passed!");
+    assert.ok(getResponse() === " You dropped your pork.", "Passed!");
+});
+
+QUnit.test("Multiple Args Drop Length Item test", function (assert) {
+    assert.ok(dropItem(["pork","beef","wine"],["wine","pork"]).length === 2, "Passed!");
+    assert.ok(getResponse() === " You dropped your wine.", "Passed!");
+});
+
+QUnit.test("Multiple Args Drop Item test", function (assert) {
+    assert.ok(dropItem(["pork","beef","wine"],["wine","pork"])[0] === "pork", "Passed!");
+    assert.ok(getResponse() === " You dropped your wine.", "Passed!");
+});
