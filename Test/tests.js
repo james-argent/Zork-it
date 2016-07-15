@@ -136,3 +136,10 @@ QUnit.test("Multiple Args Drop Item test", function (assert) {
     assert.ok(dropItem(["pork","beef","wine"],["wine","pork"])[0] === "pork", "Passed!");
     assert.ok(getResponse() === " You dropped your wine.", "Passed!");
 });
+
+QUnit.test("Get Empty Inventory Info test", function (assert) {
+    getInventory([]);
+    assert.ok(getResponse() === " Your inventory is empty.", "Passed!");
+});
+
+//Write more tests for inventory check
