@@ -33,6 +33,7 @@ To do list:
     craig's to-do: consider what to do while loading the JSON data
 
 Known bugs:
+    Deserting is currently not causing the health bar to go to 0 (26/07/2016)
     When on 0 health, the LHS border is too large due to the empty red div (13/07/2016)
 
 Browser compatibility:
