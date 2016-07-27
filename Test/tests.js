@@ -152,3 +152,9 @@ QUnit.test("Look command test", function (assert) {
     look(false,"easy");
     assert.ok(getResponse() === " ", "Passed!");
 });
+
+QUnit.test("Play Again test", function (assert) {
+    assert.notOk(playAgain("yes") === "Would you like play again?", "Passed!");
+    assert.ok(playAgain("no") === "Would you like play again?", "Passed!");
+    assert.ok(playAgain("") === "Would you like play again?", "Passed!");
+});
