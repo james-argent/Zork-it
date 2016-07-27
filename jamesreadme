@@ -24,6 +24,8 @@ Differences between difficulties:
     Over-visiting location hints
 
 To do list:
+    add full health message back in
+    add tests which test the health change in the eat function
     move getRequests function outside of setInitialGameState & test it
     move all response formatting to the getResponse function
     expand conversations
