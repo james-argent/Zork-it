@@ -188,3 +188,11 @@ QUnit.test("1 in, 1 out, Full health eating test", function (assert) {
     assert.ok(inventory.length === 1, "No items gone");
     assert.ok(getResponse() === " You are at your maximum health already.", "Max health already response check");
 });
+
+QUnit.test("healUp in friendly location", function (assert) {
+    healUp("Castle Black", 9);
+    assert.ok(getResponse() === " You were healed back up to full health by your brothers of the Night's Watch.", "Healing up response check");
+    clearResponse();
+    healUp("Castle Black", 10);
+    assert.ok(getResponse().length === 0, "Doesn't heal if not required");
+});
