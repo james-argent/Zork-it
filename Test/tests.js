@@ -7,7 +7,6 @@ QUnit.module( 'module a', {
 QUnit.test("getMaxTurns test", function (assert) {
     assert.ok(getMaxTurns("easy") === 200, "Passed!");
     assert.ok(getMaxTurns("hard") === 52, "Passed!");
-    assert.ok(getMaxTurns("Easy") === -1, "Passed!");
     assert.ok(getMaxTurns("easypeasy") === -1, "Passed!");
     assert.ok(getMaxTurns() === -1, "Passed!");
 });
@@ -175,7 +174,7 @@ QUnit.test("4 in, 1 out, half health, Eating test", function (assert) {
 
 QUnit.test("2 in, 2 out, Eating test", function (assert) {
     var inventory = ["beef", "pork"];
-    assert.ok(eat(["beef", "pork"], inventory, 5) === "", "Passed!");
+    assert.ok(eat(["beef", "pork"], inventory, 9) === "", "Passed!");
     assert.ok(inventory.length === 1 && inventory[0] === "pork", "Passed!");
     assert.ok(getResponse() === " You ate your beef.", "Passed!");
 });
@@ -184,14 +183,12 @@ QUnit.test("4 in, 1 out, Half-way, Eating test", function (assert) {
     var inventory = ["beef", "beef", "pork", "pork"];
     assert.ok(eat(["pork"], inventory, 5) === "", "Passed!");
     assert.ok(inventory.length === 3, "Passed!");
-    assert.ok(inventory[0] === "beef", "Passed!");
-    assert.ok(inventory[1] === "beef", "Passed!");
-    assert.ok(inventory[2] === "pork", "Passed!");
+    assert.ok(inventory[0] === "beef" && inventory[1] === "beef" && inventory[2] === "pork", "Passed!");
     assert.ok(getResponse() === " You ate your pork.", "Passed!");
 });
 
 QUnit.test("2 in, 0 out, Half-way, Eating test", function (assert) {
     var inventory = ["beef", "pork"];
-    assert.notOk(eat(["chicken"], inventory, 5) === "", "Passed!");
+    assert.notOk(eat(["computer"], inventory, 5) === "", "Passed!");
     assert.ok(inventory.length === 2, "Passed!");
 });
