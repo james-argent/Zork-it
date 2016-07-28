@@ -149,7 +149,7 @@ QUnit.test("Play Again test", function (assert) {
 
 QUnit.test("1 in, 1 out, Eating test", function (assert) {
     var inventory = ["beef"];
-    assert.ok(eat(["beef"], inventory, 10) === "", "Returns nothing to break");
+    assert.ok(eat(["beef"], inventory, 5) === "", "Returns nothing to break");
     assert.ok(inventory.length === 0, "Item removed");
     assert.ok(getResponse() === " You ate your beef.", "Response check");
 });
@@ -180,4 +180,11 @@ QUnit.test("2 in, 0 out, Half-way, Eating test", function (assert) {
     var inventory = ["beef", "pork"];
     assert.notOk(eat(["computer"], inventory, 5) === "", "Incorrect input shouldn't return");
     assert.ok(inventory.length === 2, "No items gone");
+});
+
+QUnit.test("1 in, 1 out, Full health eating test", function (assert) {
+    var inventory = ["beef"];
+    assert.ok(eat(["beef"], inventory, 10) === "", "Full health should return nothing to break");
+    assert.ok(inventory.length === 1, "No items gone");
+    assert.ok(getResponse() === " You are at your maximum health already.", "Max health already response check");
 });
