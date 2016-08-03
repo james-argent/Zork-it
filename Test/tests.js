@@ -149,28 +149,28 @@ QUnit.test("Play Again test", function (assert) {
 
 QUnit.test("1 in, 1 out, Eating test", function (assert) {
     var inventory = ["beef"];
-    assert.ok(eat(["beef"], inventory, 5) === "", "Returns nothing to break");
+    assert.ok(eat(["beef"], inventory, 5) === 6, "health increase check");
     assert.ok(inventory.length === 0, "Item removed");
     assert.ok(getResponse() === " You ate your beef.", "Response check");
 });
 
 QUnit.test("4 in, 1 out, Eating test", function (assert) {
     var inventory = ["beef", "beef", "beef", "beef"];
-    assert.ok(eat(["beef"], inventory, 5) === "", "Returns nothing to break");
+    assert.ok(eat(["beef"], inventory, 5) === 6, "health increase check");
     assert.ok(inventory.length === 3, "ONE item removed");
     assert.ok(getResponse() === " You ate your beef.", "Response check");
 });
 
 QUnit.test("2 in, 2 out, Eating test", function (assert) {
     var inventory = ["beef", "pork"];
-    assert.ok(eat(["beef", "pork"], inventory, 9) === "", "Returns nothing to break");
+    assert.ok(eat(["beef", "pork"], inventory, 9) === 10, "health increase check");
     assert.ok(inventory.length === 1 && inventory[0] === "pork", "Only the one, correct, item removed");
     assert.ok(getResponse() === " You ate your beef.", "Response check");
 });
 
 QUnit.test("4 in, 1 out, Half-way, Eating test", function (assert) {
     var inventory = ["beef", "beef", "pork", "pork"];
-    assert.ok(eat(["pork"], inventory, 5) === "", "Returns nothing to break");
+    assert.ok(eat(["pork"], inventory, 5) === 6, "health increase check");
     assert.ok(inventory.length === 3, "Only the one, correct, item removed");
     assert.ok(inventory[0] === "beef" && inventory[1] === "beef" && inventory[2] === "pork", "Remaining items correct");
     assert.ok(getResponse() === " You ate your pork.", "Response check");
@@ -178,13 +178,13 @@ QUnit.test("4 in, 1 out, Half-way, Eating test", function (assert) {
 
 QUnit.test("2 in, 0 out, Half-way, Eating test", function (assert) {
     var inventory = ["beef", "pork"];
-    assert.notOk(eat(["computer"], inventory, 5) === "", "Incorrect input shouldn't return");
+    assert.notOk(eat(["computer"], inventory, 5) === 6, "health increase shouldn't happen check");
     assert.ok(inventory.length === 2, "No items gone");
 });
 
 QUnit.test("1 in, 1 out, Full health eating test", function (assert) {
     var inventory = ["beef"];
-    assert.ok(eat(["beef"], inventory, 10) === "", "Full health should return nothing to break");
+    assert.ok(eat(["beef"], inventory, 10) === 10, "Health shouldn't change if it's max already");
     assert.ok(inventory.length === 1, "No items gone");
     assert.ok(getResponse() === " You are at your maximum health already.", "Max health already response check");
 });
