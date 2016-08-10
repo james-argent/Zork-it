@@ -198,3 +198,17 @@ QUnit.test("Safe Place Healing Test", function (assert) {
     assert.ok(safePlaceHeal(5, "Mole Town", [{"name": "Shadow Tower", "safeZone": 'true'}], 10) === 5, "Half health - Not healed to full in wrong place.");
     assert.ok(safePlaceHeal(10, "Mole Town", [{"name": "Shadow Tower", "safeZone": 'true'}], 10) === 10, "Full health - Not healed to full in wrong place.");
 });
+
+QUnit.test("Locate User Function Test", function (assert) {
+    assert.ok(locateUser("medium", [{"x": 0, "y": 0, "name": "Castle Black", "comment": "You feel at home here, Sam seems very eager to talk.", "winCon": true, "safeZone": true, "talkPerson": "sam"}], 0, 0, false) === "Castle Black", "Current Location set");
+    assert.ok(getResponse() === "You are at Castle Black. You feel at home here, Sam seems very eager to talk.", "Response check");
+    clearResponse();
+    locateUser("easy", [{"x": 2, "y": 3, "name": "Hardhome", "comment": "The wildings have a settlement here. Best not disturb them.", "visitCount": 4}], 2, 3, false);
+    assert.ok(getResponse() === "You are at Hardhome. The wildings have a settlement here. Best not disturb them. There's really no reason to be here.", "Visiting too much response check");
+    clearResponse();
+    assert.ok(locateUser("medium", [], 0, 0, false) === null, "Not hard, Unidentified location");
+    assert.ok(getResponse() === "This place doesn't have a name. Your coordinates are (0,0).", "Not hard, unidentified location response check.");
+    clearResponse();
+    assert.notOk(locateUser("hard", [], 0, 0, false) === null, "Hard, unidentified location");
+    assert.ok(getResponse() === "", "Hard, unidentified location lack of response check.");
+});
