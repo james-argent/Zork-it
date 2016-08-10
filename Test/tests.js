@@ -182,9 +182,19 @@ QUnit.test("2 in, 0 out, Half-way, Eating test", function (assert) {
     assert.ok(inventory.length === 2, "No items gone");
 });
 
-QUnit.test("1 in, 1 out, Full health eating test", function (assert) {
+QUnit.test("1 in, 1 out, Full health Eating test", function (assert) {
     var inventory = ["beef"];
     assert.ok(eat(["beef"], inventory, 10) === 10, "Health shouldn't change if it's max already");
     assert.ok(inventory.length === 1, "No items gone");
     assert.ok(getResponse() === "You are at your maximum health already.", "Max health already response check");
+});
+
+QUnit.test("Safe Place Healing Test", function (assert) {
+    assert.ok(safePlaceHeal(5, "Shadow Tower", [{"name": "Shadow Tower", "safeZone": 'true'}], 10) === 10, "Half health - Healed to full in correct place.");
+    assert.ok(getResponse() === "You were healed back up to full health by your brothers of the Night's Watch.", "Response check");
+    clearResponse();
+    assert.ok(safePlaceHeal(10, "Shadow Tower", [{"name": "Shadow Tower", "safeZone": 'true'}], 10) === 10, "Full health - Not healed to full in correct place.");
+    assert.ok(getResponse() === "", "Lack of response check");
+    assert.ok(safePlaceHeal(5, "Mole Town", [{"name": "Shadow Tower", "safeZone": 'true'}], 10) === 5, "Half health - Not healed to full in wrong place.");
+    assert.ok(safePlaceHeal(10, "Mole Town", [{"name": "Shadow Tower", "safeZone": 'true'}], 10) === 10, "Full health - Not healed to full in wrong place.");
 });
