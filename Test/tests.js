@@ -27,11 +27,11 @@ QUnit.test("setDifficulty test", function (assert) {
 
 QUnit.test("respond function test", function (assert) {
     respond("hello");
-    assert.ok(getResponse() === " hello", "One response");
+    assert.ok(getResponse() === "hello", "One response");
     respond("there");
-    assert.ok(getResponse() === " hello there", "Two responses");
+    assert.ok(getResponse() === "hello there", "Two responses");
     respond("friend");
-    assert.ok(getResponse() === " hello there friend", "Three responses");
+    assert.ok(getResponse() === "hello there friend", "Three responses");
 });
 
 QUnit.test("clearResponse test", function (assert) {
@@ -47,7 +47,7 @@ QUnit.test("responseLength test", function (assert) {
     assert.ok(responseLength() === 2, "Two responses length");
     respond("friend");
     assert.ok(responseLength() === 3, "Three responses length");
-    assert.ok(getResponse() === " hello there friend", "Full string");
+    assert.ok(getResponse() === "hello there friend", "Full string");
 });
 
 QUnit.test("setInitialGameState test", function (assert) {
@@ -73,12 +73,12 @@ QUnit.test("setInitialGameState test", function (assert) {
 QUnit.test("healthCheck test", function (assert) {
     healthCheck(10);
     healthCheck(0);
-    assert.ok(getResponse() === " Your current health is: 10. Your current health is: 0.", "Health check response");
+    assert.ok(getResponse() === "Your current health is: 10. Your current health is: 0.", "Health check response");
 });
 
 QUnit.test("Objective Complete test", function (assert) {
     assert.ok(objectiveComplete("london", ["paris","london"])[0] === "paris", "Array contents");
-    assert.ok(getResponse() === " I've already done that here!", "Already done response");
+    assert.ok(getResponse() === "I've already done that here!", "Already done response");
     assert.ok(objectiveComplete("london", ["paris","london"])[1] === "london", "Array contents");
     assert.ok(objectiveComplete("london", ["paris","london"]).length === 2, "Array length");
 });
@@ -100,45 +100,45 @@ QUnit.test("Conversation test", function (assert) {
 
 QUnit.test("Drop Item test", function (assert) {
     assert.ok(dropItem(["pork"],["beef"]).length === 1, "Can't drop");
-    assert.ok(getResponse() === " You can't drop what you don't have.", "Can't response");
+    assert.ok(getResponse() === "You can't drop what you don't have.", "Can't response");
     assert.ok(dropItem(["pork"],["beef"])[0] === "pork", "Not-dropped array contents");
     clearResponse();
     assert.ok(dropItem(["pork","beef"],["pork"]).length === 1, "Item dropped");
-    assert.ok(getResponse() === " You dropped your pork.", "Dropped response");
+    assert.ok(getResponse() === "You dropped your pork.", "Dropped response");
     clearResponse();
     assert.ok(dropItem(["pork","beef"],["pork"])[0] === "beef", "Post-drop array contents");
     clearResponse();
     assert.ok(dropItem(["pork","beef","wine"],["wine","pork"]).length === 2, "Multi-drop request, only 1 drop");
-    assert.ok(getResponse() === " You dropped your wine.", "Correct item dropped");
+    assert.ok(getResponse() === "You dropped your wine.", "Correct item dropped");
     assert.ok(dropItem(["pork","beef","wine"],["wine","pork"])[0] === "pork", "Second drop-requested item not dropped");
 });
 
 QUnit.test("Get Inventory Info (grammar) test", function (assert) {
     getInventory([]);
-    assert.ok(getResponse() === " Your inventory is empty.", "Empty inventory");
+    assert.ok(getResponse() === "Your inventory is empty.", "Empty inventory");
     clearResponse();
     getInventory(["beef"]);
-    assert.ok(getResponse() === " Your inventory contains: beef.", "One item in inventory");
+    assert.ok(getResponse() === "Your inventory contains: beef.", "One item in inventory");
     clearResponse();
     getInventory(["beef", "pork"]);
-    assert.ok(getResponse() === " Your inventory contains: beef and pork.", "Two items in inventory");
+    assert.ok(getResponse() === "Your inventory contains: beef and pork.", "Two items in inventory");
     clearResponse();
     getInventory(["beef", "pork", "wine"]);
-    assert.ok(getResponse() === " Your inventory contains: beef, pork, and wine.", "Three items in inventory");
+    assert.ok(getResponse() === "Your inventory contains: beef, pork, and wine.", "Three items in inventory");
 });
 
 QUnit.test("Look command test", function (assert) {
     look(false,"hard");
-    assert.ok(getResponse() === " There's nothing around.", "Not located and hard difficulty");
+    assert.ok(getResponse() === "There's nothing around.", "Not located and hard difficulty");
     clearResponse();
     look(true,"medium");
-    assert.ok(getResponse() === " ", "Located and medium difficulty");
+    assert.ok(getResponse() === "", "Located and medium difficulty");
     clearResponse();
     look(true,"hard");
-    assert.ok(getResponse() === " ", "Located and hard difficulty");
+    assert.ok(getResponse() === "", "Located and hard difficulty");
     clearResponse();
     look(false,"easy");
-    assert.ok(getResponse() === " ", "Not located and easy difficulty");
+    assert.ok(getResponse() === "", "Not located and easy difficulty");
 });
 
 QUnit.test("Play Again test", function (assert) {
@@ -151,21 +151,21 @@ QUnit.test("1 in, 1 out, Eating test", function (assert) {
     var inventory = ["beef"];
     assert.ok(eat(["beef"], inventory, 5) === 6, "health increase check");
     assert.ok(inventory.length === 0, "Item removed");
-    assert.ok(getResponse() === " You ate your beef.", "Response check");
+    assert.ok(getResponse() === "You ate your beef.", "Response check");
 });
 
 QUnit.test("4 in, 1 out, Eating test", function (assert) {
     var inventory = ["beef", "beef", "beef", "beef"];
     assert.ok(eat(["beef"], inventory, 5) === 6, "health increase check");
     assert.ok(inventory.length === 3, "ONE item removed");
-    assert.ok(getResponse() === " You ate your beef.", "Response check");
+    assert.ok(getResponse() === "You ate your beef.", "Response check");
 });
 
 QUnit.test("2 in, 2 out, Eating test", function (assert) {
     var inventory = ["beef", "pork"];
     assert.ok(eat(["beef", "pork"], inventory, 9) === 10, "health increase check");
     assert.ok(inventory.length === 1 && inventory[0] === "pork", "Only the one, correct, item removed");
-    assert.ok(getResponse() === " You ate your beef.", "Response check");
+    assert.ok(getResponse() === "You ate your beef.", "Response check");
 });
 
 QUnit.test("4 in, 1 out, Half-way, Eating test", function (assert) {
@@ -173,7 +173,7 @@ QUnit.test("4 in, 1 out, Half-way, Eating test", function (assert) {
     assert.ok(eat(["pork"], inventory, 5) === 6, "health increase check");
     assert.ok(inventory.length === 3, "Only the one, correct, item removed");
     assert.ok(inventory[0] === "beef" && inventory[1] === "beef" && inventory[2] === "pork", "Remaining items correct");
-    assert.ok(getResponse() === " You ate your pork.", "Response check");
+    assert.ok(getResponse() === "You ate your pork.", "Response check");
 });
 
 QUnit.test("2 in, 0 out, Half-way, Eating test", function (assert) {
@@ -186,5 +186,5 @@ QUnit.test("1 in, 1 out, Full health eating test", function (assert) {
     var inventory = ["beef"];
     assert.ok(eat(["beef"], inventory, 10) === 10, "Health shouldn't change if it's max already");
     assert.ok(inventory.length === 1, "No items gone");
-    assert.ok(getResponse() === " You are at your maximum health already.", "Max health already response check");
+    assert.ok(getResponse() === "You are at your maximum health already.", "Max health already response check");
 });
