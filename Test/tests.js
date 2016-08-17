@@ -212,3 +212,15 @@ QUnit.test("Locate User Function Test", function (assert) {
     assert.notOk(locateUser("hard", [], 0, 0, false) === null, "Hard, unidentified location");
     assert.ok(getResponse() === "", "Hard, unidentified location lack of response check.");
 });
+
+QUnit.test("Taking items Function Test", function (assert) {
+    assert.ok(takeItem([], [{"name": "Moletown", "item": "whore"}], "whore", 3, "Moletown").length === 1, "Taking an item");
+    assert.ok(getResponse() === "You put the whore in your inventory.", "Taking an item response check.");
+    assert.ok(takeItem([], [{"name": "Moletown", "item": "whore"}], "whore", 3, "Moletown")[0] === "whore", "Taking an item");
+    clearResponse();
+    assert.ok(takeItem(["1","2","3"], [{"name": "Moletown", "item": "whore"}], "whore", 3, "Moletown").length === 3, "Can't take an item because inventory is full");
+    assert.ok(getResponse() === "Your inventory is full already.", "Inventory full response check.");
+    clearResponse();
+    assert.ok(takeItem([], [{"name": "Moletown", "item": "whore"}], "tree", 3, "Moletown").length === 0, "Item requested not available");
+    assert.ok(getResponse() === "You can't take that.", "Can't take that response check.");
+});
