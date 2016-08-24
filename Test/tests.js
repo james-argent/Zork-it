@@ -235,3 +235,14 @@ QUnit.test("End game effects function Test", function (assert) {
     endGameFX("lost");
     assert.notOk(document.getElementById('loseMessage').classList.remove('hidden'), "Unhide loss message");
 });
+
+QUnit.test("Hide Message function test", function (assert) {
+    endGameFX("won");
+    hideMessage();
+    assert.ok(document.getElementById('winMessage').classList.contains('hidden'), "Hide win message");
+    assert.ok(document.getElementById('loseMessage').classList.contains('hidden'), "Hide win message");
+    endGameFX("lose");
+    hideMessage();
+    assert.ok(document.getElementById('winMessage').classList.contains('hidden'), "Hide lose message");
+    assert.ok(document.getElementById('loseMessage').classList.contains('hidden'), "Hide lose message");
+});
