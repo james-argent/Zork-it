@@ -23,6 +23,7 @@ Differences between difficulties:
     Over-visiting location hints
 
 To do list:
+    limit going beyond crastor's until after mini-quest
     move getRequests function outside of setInitialGameState & test it
     expand conversations
     add dictionary??

@@ -224,3 +224,14 @@ QUnit.test("Taking items Function Test", function (assert) {
     assert.ok(takeItem([], [{"name": "Moletown", "item": "whore"}], "tree", 3, "Moletown").length === 0, "Item requested not available");
     assert.ok(getResponse() === "You can't take that.", "Can't take that response check.");
 });
+
+QUnit.test("End game function Test", function (assert) {
+    assert.ok(endGame("won") === true, "GameState correctly maintained");
+});
+
+QUnit.test("End game effects function Test", function (assert) {
+    endGameFX("won");
+    assert.notOk(document.getElementById('winMessage').classList.contains('hidden'), "Unhide win message");
+    endGameFX("lost");
+    assert.notOk(document.getElementById('loseMessage').classList.remove('hidden'), "Unhide loss message");
+});
